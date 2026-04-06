@@ -1,0 +1,16 @@
+version: 2
+
+# Source definition / 数据源定义
+# Tells dbt where to find the raw data in BigQuery
+# 告诉dbt在BigQuery的哪里找原始数据
+
+sources:
+  - name: aemo_electricity
+    database: taxi-rides-ny-v2      # GCP project ID / GCP项目ID
+    schema: aemo_electricity        # BigQuery dataset / BigQuery数据集
+    tables:
+      - name: nem_partitioned
+        description: >
+          Partitioned and clustered AEMO NEM electricity data.
+          按日期分区、按州聚簇的AEMO电力数据表。
+          Partitioned by settlement_date, clustered by region_id.
