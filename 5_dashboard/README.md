@@ -63,18 +63,3 @@ Hydro (TAS) is controllable → stable prices. Wind/solar (SA) is intermittent �
 
 ---
 
-## Tools Used / 使用工具
-
-| Tool | Purpose |
-|------|---------|
-| BigQuery SQL | Data exploration & story discovery |
-| HTML + Chart.js | Dashboard with consistent visual style |
-
----
-
-## How to Reproduce / 如何复现
-
-1. Complete Steps 1–4 (data ingestion → dbt)
-2. Open `aemo_dashboard_v2.html` in Chrome
-3. Screenshot with `Win + Shift + S`
-4. Save to `screenshots/` folder
