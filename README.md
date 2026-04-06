@@ -1,4 +1,19 @@
-# End-to-End Cloud Data Pipeline for Australian Energy Market Operator (AEMO)
+# End-to-End Cloud Data Pipeline for Australian Energy Market Operator
+
+## Problem Description
+
+Australia's National Electricity Market (NEM) generates vast amounts of price and demand data across 5 states every 30 minutes — but this raw data is scattered across hundreds of CSV files on the AEMO website and is difficult to analyse at scale.
+
+This project solves that problem by building a fully automated, end-to-end data pipeline that:
+- **Ingests** 300 CSV files (2020–2024, 5 states) from the AEMO website automatically
+- **Stores** raw data in a cloud data lake (Google Cloud Storage)
+- **Loads and partitions** data into a data warehouse (BigQuery) for efficient querying
+- **Transforms** raw records into analytical tables using dbt
+- **Visualises** 4 key insights via an interactive dashboard
+
+**Dataset:** AEMO NEM Aggregated Price & Demand Data — ~3 million rows covering NSW, VIC, QLD, SA, and TAS from January 2020 to December 2024.
+
+**Goal:** Enable data-driven analysis of electricity price trends, demand patterns, and market anomalies across Australian states. (AEMO)
 
 > 端到端云数据管道项目 — 澳洲国家电力市场数据工程
 
