@@ -1,3 +1,5 @@
+> 端到端云数据管道项目 — 澳洲国家电力市场数据工程
+
 # End-to-End Cloud Data Pipeline for Australian Energy Market Operator
 
 ## Problem Description
@@ -14,8 +16,6 @@ This project solves that problem by building a fully automated, end-to-end data 
 **Dataset:** AEMO NEM Aggregated Price & Demand Data — ~3 million rows covering NSW, VIC, QLD, SA, and TAS from January 2020 to December 2024.
 
 **Goal:** Enable data-driven analysis of electricity price trends, demand patterns, and market anomalies across Australian states. (AEMO)
-
-> 端到端云数据管道项目 — 澳洲国家电力市场数据工程
 
 ## Project Overview / 项目概述
 
