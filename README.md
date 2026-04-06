@@ -85,3 +85,17 @@ QLD1 is the most price-volatile state, not SA1. Extreme summer heat and heavy in
 
 ---
 *DE Zoomcamp Final Project · KD · 2024*
+
+## What I Learned / 技术挑战与收获
+
+**Challenge 1: dbt profiles path conflict**
+Running dbt inside WSL while credentials were configured for Docker caused a `NoneType` error. Fixed by updating the keyfile path in `~/.dbt/profiles.yml` to use the WSL absolute path instead of the Docker container path.
+
+**Challenge 2: BigQuery partitioning strategy**
+Chose to partition by `DATE(settlement_date)` rather than by year/month, so queries filtering on specific date ranges can skip irrelevant partitions — reducing both query cost and scan time on a 3M-row dataset.
+
+**Challenge 3: Negative electricity prices**
+Initially assumed negative prices were data errors. Investigation revealed they are a real market mechanism in South Australia due to renewable energy oversupply — this became one of the most interesting findings in the dashboard.
+
+**Challenge 4: Pipeline idempotency**
+Designed the Airflow DAG to use `WRITE_TRUNCATE` mode so re-running the pipeline doesn't duplicate data — each run produces the same result regardless of how many times it's executed.
